@@ -12,6 +12,10 @@ output "jump" {
   value = vsphere_virtual_machine.jump.default_ip_address
 }
 
+output "jump_private_key" {
+  value = var.jump.private_key_path
+}
+
 output "controllers" {
   value = vsphere_virtual_machine.controller.*.default_ip_address
 }
